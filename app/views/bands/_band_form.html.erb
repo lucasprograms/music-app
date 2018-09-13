@@ -1,0 +1,11 @@
+<% action = (band.persisted? ? band_url(band) : bands_url) %>
+<% method = (band.persisted? ? :patch : :post) %>
+<% btn_text = (band.persisted? ? 'Update Band' : 'Add Band') %>
+
+<form class="input-form row" action="<%= action %>" method="post">
+  <%= render 'partials/csrf_auth' %>
+  <input type="hidden" name="_method" value="<%= method %>" />
+  <label class="col-12">Band Name:</label>
+  <input class="col-12" name="band[name]" value="<%= band.name%>" />
+  <button class="offset-3 col-6 offset-sm-0 col-sm-4 btn btn-primary" type="submit"><%= btn_text %></button>
+</form>

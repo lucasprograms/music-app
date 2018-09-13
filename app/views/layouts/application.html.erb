@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>MusicApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,10 +10,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value.join(', ') %></div>
-    <% end %>
-    <%= yield %>
+  <body class="app-body">
+    <%= render 'partials/header' %>
+    <div class="container">
+      <h3 class="page-name">
+        <%= yield :page_name %>
+      </h3>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value.join(', ') %></div>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

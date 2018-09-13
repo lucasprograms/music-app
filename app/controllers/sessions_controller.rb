@@ -10,6 +10,8 @@ class SessionsController < ApplicationController
   def destroy
     current_user && current_user.reset_session_token!
     session[:session_token] = nil
+    flash[:info] = ['You have been successfully logged out']
+    redirect_to bands_url
   end
 
   private

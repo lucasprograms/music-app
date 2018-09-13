@@ -1,0 +1,21 @@
+header.app-header {
+  background-color: #6A5ACD;
+  padding: 20px 0;
+  margin-bottom: 10px;
+
+  h1 {
+    color: #FFF;
+    font-family: 'Arvo';
+    font-weight: 700;
+    font-size: 32px;
+    margin-left: 5px;
+
+    @media (min-width: 576px) {
+      font-size: 40px;
+    }
+  }
+
+  a.btn {
+    line-height: 2.5;
+  }
+}

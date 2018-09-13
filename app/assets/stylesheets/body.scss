@@ -1,0 +1,27 @@
+body.app-body {
+  background-color: #CCC7C7;
+  height: 100%;
+
+  .alert {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  form {
+    &.input-form {
+      max-width: 600px;
+      margin: 20px auto 0 auto;
+    }
+
+    label {
+      font-weight: 700;
+    }
+
+    input {
+      margin-bottom: 10px;
+      border: 1px solid #000;
+      padding: 5px;
+      outline: none;
+    }
+  }
+}

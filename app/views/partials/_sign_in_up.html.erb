@@ -1,8 +1,8 @@
-<form action="/<%= type == :in ? 'session' : 'users'%>" method="post">
+<form class="row input-form" action="/<%= type == :in ? 'session' : 'users'%>" method="post">
   <%= render 'partials/csrf_auth' %>
-  <label for="new-email">e-mail: </label>
-  <input id="new-email" name="<%= type == :in ? 'session' : 'user'%>[email]" type="text" />
-  <label for="new-password">Password: </label>
-  <input id="new-password" name="<%= type == :in ? 'session' : 'user'%>[password]" type="password" />
-  <button type="submit">Sign <%= type == :in ? 'In' : 'Up'%>!</button>
+  <label class="col-12" for="new-email">e-mail: </label>
+  <input class="col-12" id="new-email" name="<%= type == :in ? 'session' : 'user'%>[email]" type="text" />
+  <label class="col-12" for="new-password">Password: </label>
+  <input class="col-12" id="new-password" name="<%= type == :in ? 'session' : 'user'%>[password]" type="password" />
+  <button class="offset-3 col-6 offset-sm-0 col-sm-4 btn btn-primary" type="submit">Sign <%= type == :in ? 'In' : 'Up'%>!</button>
 </form>

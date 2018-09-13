@@ -1,0 +1,9 @@
+<% content_for :page_name, 'Bands' %>
+<ul>
+  <% @bands.each do |band| %>
+  <li>
+    <a href="/bands/<%= band.id %>"><%= band.name %></a>
+  </li>
+  <% end %>
+  <a class="btn btn-primary mt-3" href="/bands/new">Add a Band</a>
+</ul>

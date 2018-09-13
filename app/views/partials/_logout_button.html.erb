@@ -1,0 +1,6 @@
+<form class="col-6 col-sm-4 row" action="/session" method="post">
+  <%= render 'partials/csrf_auth' %>
+  <input type="hidden" name="_method" value="delete" />
+  <div class="col-2 col-sm-6 col-md-8"></div>
+  <button class="btn btn-primary col-10 col-sm-6 col-md-4" type="submit">Sign Out</button>
+</form>
